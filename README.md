@@ -1,1 +1,1 @@
-# stc-rule
+一些用在STC规则生成器上的ini配置
