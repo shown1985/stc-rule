@@ -33,19 +33,19 @@ custom_proxy_group=Ⓜ️ 微软服务`select`[]DIRECT`[]🇭🇰 香港低倍`[
 custom_proxy_group=⛔ 全球拦截`select`[]REJECT`[]DIRECT
 custom_proxy_group=🐟 漏网之鱼`select`🔰 低倍选择`select`[]♻️ 自动低倍`[]✈️ 低倍顺位`[]✈️ 高倍顺位`[]🚀 手动切换`[]DIRECT
 custom_proxy_group=🚀 手动切换`select`.*
-custom_proxy_group=♻️ 自动低倍`url-test`\|[1-2]倍率\|`http://www.gstatic.com/generate_204`500
-custom_proxy_group=♻️ 自动高倍`url-test`\|[3-9]倍率\|`http://www.gstatic.com/generate_204`500
-custom_proxy_group=✈️ 低倍顺位`fallback`\|[1-2]倍率\|`http://www.gstatic.com/generate_204`500
-custom_proxy_group=✈️ 高倍顺位`fallback`\|[3-9]倍率\|`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇭🇰 香港低倍`url-test`(?=.*(🇭🇰))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇹🇼 台湾低倍`url-test`(?=.*(🇹🇼))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇸🇬 狮城低倍`url-test`(?=.*(🇸🇬|🇭🇰))(?=.*(新加坡|_新加坡))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇯🇵 日本低倍`url-test`(?=.*(🇯🇵))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇺🇸 美国低倍`url-test`(?=.*(🇺🇸))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇰🇷 韩国低倍`url-test`(?=.*(🇰🇷))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇷🇺 俄罗斯低倍`url-test`(?=.*(🇷🇺))(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇺🇸 美国奈飞`url-test`(?=.*(🇺🇸))(?=.*解锁流\|[1-3]倍率)(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇹🇼 台湾奈飞`url-test`(?=.*(🇹🇼))(?=.*解锁流\|[1-2]倍率)(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇭🇰 香港流`url-test`(?=.*(🇭🇰))(?=.*解锁流\|[1-2]倍率)(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
-custom_proxy_group=🇯🇵 日本奈飞`url-test`(?=.*(🇯🇵))(?=.*解锁流\|[1-2]倍率)(?!.*(\|[3-9]倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=♻️ 自动低倍`url-test`\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|`http://www.gstatic.com/generate_204`500
+custom_proxy_group=♻️ 自动高倍`url-test`\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|`http://www.gstatic.com/generate_204`500
+custom_proxy_group=✈️ 低倍顺位`fallback`\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|`http://www.gstatic.com/generate_204`500
+custom_proxy_group=✈️ 高倍顺位`fallback`\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇭🇰 香港低倍`url-test`(?=.*(🇭🇰))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇹🇼 台湾低倍`url-test`(?=.*(🇹🇼))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇸🇬 狮城低倍`url-test`(?=.*(🇸🇬|🇭🇰))(?=.*(新加坡|_新加坡))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇯🇵 日本低倍`url-test`(?=.*(🇯🇵))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇺🇸 美国低倍`url-test`(?=.*(🇺🇸))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇰🇷 韩国低倍`url-test`(?=.*(🇰🇷))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇷🇺 俄罗斯低倍`url-test`(?=.*(🇷🇺))(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇺🇸 美国奈飞`url-test`(?=.*(🇺🇸))(?=.*解锁流\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率)(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇹🇼 台湾奈飞`url-test`(?=.*(🇹🇼))(?=.*解锁流\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率)(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇭🇰 香港流`url-test`(?=.*(🇭🇰))(?=.*解锁流\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率)(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
+custom_proxy_group=🇯🇵 日本奈飞`url-test`(?=.*(🇯🇵))(?=.*解锁流\|([1]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率)(?!.*(\|([2-9]([0-9]{0,7})|([0]))(\.[0-9]{1,2})*倍率\|))(.+)`http://www.gstatic.com/generate_204`500
 ;设置分组标志位
