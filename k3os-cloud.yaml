@@ -33,7 +33,7 @@ ssh_authorized_keys:
 boot_cmd:
 - "echo Asia/Shanghai > /etc/timezone"
 k3os:
-  passowrd: "$1$ySKgHFpr$6E4FWXHGRTdPiza8WDWC01"
+  passowrd: p@ssw0rd
   ntp_servers:
   - ntp.aliyun.com
   - time1.cloud.tencent.com
