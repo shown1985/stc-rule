@@ -28,40 +28,12 @@ write_files:
 #     [plugins.cri.registry.mirrors."your-insecure-registory:5000"]
 #       endpoint = ["http://your-insecure-registory:5000"]
   patch: /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
-# - content: |+
-#     -----BEGIN CERTIFICATE-----
-    #  MIIERjCCAy4CCQCajU6CR+esGTANBgkqhkiG9w0BAQsFADCB5DELMAkGA1UEBhMC
-    #  Q04xEjAQBgNVBAgMCeS4iua1t+W4gjEPMA0GA1UEBwwG5LiK5rW3MTYwNAYDVQQK
-    #  DC3kuIrmtbflppnnn6Xml4XnlLXlrZDllYbliqHmnI3liqHmnInpmZDlhazlj7gx
-    #  GzAZBgNVBAsMEuaKgOacr+eglOWPkeS4reW/gzE+MDwGA1UEAww1U2hhbmdoYWkg
-    #  TW9qb3J5IEludGVybmF0aW9uYWwgVHJhdmVsIFNlcnZpY2UgQ28uLCBMdGQxGzAZ
-    #  BgkqhkiG9w0BCQEWDGl0QG1vam9yeS5jbjAeFw0xOTEwMTcwNTQzMjBaFw0yOTEw
-    #  MTQwNTQzMjBaMIHkMQswCQYDVQQGEwJDTjESMBAGA1UECAwJ5LiK5rW35biCMQ8w
-    #  DQYDVQQHDAbkuIrmtbcxNjA0BgNVBAoMLeS4iua1t+WmmeefpeaXheeUteWtkOWV
-    #  huWKoeacjeWKoeaciemZkOWFrOWPuDEbMBkGA1UECwwS5oqA5pyv56CU5Y+R5Lit
-    #  5b+DMT4wPAYDVQQDDDVTaGFuZ2hhaSBNb2pvcnkgSW50ZXJuYXRpb25hbCBUcmF2
-    #  ZWwgU2VydmljZSBDby4sIEx0ZDEbMBkGCSqGSIb3DQEJARYMaXRAbW9qb3J5LmNu
-    #  MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlN0fwX2oI0lUrZx4MfDr
-    #  PBn1ILDNgZClLc2lCd0dNjHA7f2y5ZZQ9bKAh9HvN5cw7e1kdyF0pE19eCKQGjmA
-    #  fW50vwXBHkFEdXQZXck0P/ICA20jDsKjpWScN7LAA3ECIOeQbImw/IfJX+vXh0qw
-    #  iCZ7VZFmqyVXLuzrmnaOC5D5dCXTfeXJy8EEMbShuw4y3G1FV4QK35fgUdtlYnj5
-    #  ZSfDMZD4ioQNAAVa6N+hBwvO5GBtbCprRaHs+NOgdokfAj/a4vOP6B14f8qZ6TO0
-    #  EchwhNLLEa84GMHTr5W7DNA4Jbz55BJzZlzWTZ5G3ZWqB/Xkrx/n0B2aqUbNWGhE
-    #  IwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBGhzJuPAqsRxBVAPXGXVyJYZLCezyf
-    #  AZIjPZjCC5fq+RX6Beuu0mk8CMv+5OKn3Rw6bGDKbBufkpM9BsZbQdR4b3sLoS4Q
-    #  g+8OUmAt9KztOjEyng27STljsGV73U/Jpw6ALRF/vIfl0gRRYQxI9dkgFimYY721
-    #  IKcNFwoXp6o2vzbjbKG/RlaHbahcnICQz12iQ6NVTiToCPn9mDc+jFfrvQfP2KMK
-    #  m2Nw3QPpflYtTHXDLasfpxITsahLrxbXNg0VaMJlo3ZH3k1sTj9/cimzo0LLjwc6
-    #  1P+lKMp1ZweQRxD+MiKSA88uBMnIiyxo9e4rkLD2H44UQBF/xdj/Lfaj
-    #  -----END CERTIFICATE-----
-    # owner: root
-    # path: /etc/docker/certs.d/packages.cddcorp.com/ca.crt
-    # permissions: "0644"
 ssh_authorized_keys:
 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDeJiOJcZHItmnRJNXBzsNiohUKpqrbUCvnOQ8U27ey/Yrcex93Cfr/mcPA4uOgPIb/W5BVwX2fkVOE9+DKEM2bYT9CxJ31SjntnfVMyHBmBiw0Wg3XsNWNOudOuhnZXdWBMW0rZJqV0phLGodKQeBWimM6gSijPerHu9B5bv5VceO54r8BL7/nZ+8z5SZ4yrS4m8G3ofU1qKrxFB3WPeGy15PTNwwLkStdeb2kYGJ3hJdkBwvNTPBfl7j3JlAVOXWgSNKXBZrSnl+9VzLJd+0y3Fa8vbl46WPE5W0FSseeHXn5cacSNL0PX2ArKYlPxEs6ZZqEGOJx27Ej94Me7coNlUU7ntHjs8fAEjTqcC+Rcv/PMo3fH7XDS1Y+CwB1j/BPZ6aZqJrEiSkTWYqjE7mBNEbKJ5PkFzA7BUxKO3D2eBfWjylvsPciFlxDyUJKYVsErbOuWIBsHBE23300/wwXK9wZqm6y6XWkX6ItVO923N3vOTRrpJ39UyAQV+qveis= Administrator@YWZMVWW06YXA1XB
 boot_cmd:
 - "echo Asia/Shanghai > /etc/timezone"
 k3os:
+  passowrd: "$1$ySKgHFpr$6E4FWXHGRTdPiza8WDWC01"
   ntp_servers:
   - ntp.aliyun.com
   - time1.cloud.tencent.com
