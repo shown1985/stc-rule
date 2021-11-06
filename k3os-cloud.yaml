@@ -4,14 +4,14 @@ write_files:
 - content: |-
     [service_eth0]
     Type = ethernet
-    IPv4 = 172.16.10.249/255.255.255.0/172.16.10.254
+    IPv4 = 172.16.10.249/255.255.255.0/172.16.10.250
     IPv6 = off
     Nameservers = 172.16.10.250
     SearchDomains = chlover.local
     Domain = chlover.local
     TimeServers = ntp.aliyun.com, time1.cloud.tencent.com, 0.cn.pool.ntp.org
-  owner: root
-  patch: /var/lib/connman/default.config
+  permissions: '0644'
+  patch: /var/lib/connman/eth0.config
 - content: |-
     [plugins.opt]
     path = "{{ .NodeConfig.Containerd.Opt }}"
