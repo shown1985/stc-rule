@@ -1,18 +1,18 @@
 # cloud-config
-hostname: shawn-local-1
+hostname: shawn-local-2
 write_files:
-- content: |-
+- patch: /var/lib/connman/default.config
+  content: |-
     [service_eth0]
     Type = ethernet
-    IPv4 = 172.16.10.249/255.255.255.0/172.16.10.250
+    IPv4 = 172.16.10.248/255.255.255.0/172.16.10.250
     IPv6 = off
     Nameservers = 172.16.10.250
     SearchDomains = chlover.local
     Domain = chlover.local
     TimeServers = ntp.aliyun.com, time1.cloud.tencent.com, 0.cn.pool.ntp.org
-  permissions: '0644'
-  patch: /var/lib/connman/eth0.config
-- content: |-
+- patch: /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
+  content: |-
     [plugins.opt]
     path = "{{ .NodeConfig.Containerd.Opt }}"
 
@@ -26,10 +26,6 @@ write_files:
     [plugins.cri.registry.mirrors]
       [plugins.cri.registry.mirrors."docker.io"]
         endpoint = ["http://f1361db2.m.daocloud.io"]
-#     [plugins.cri.registry.mirrors."your-insecure-registory:5000"]
-#       endpoint = ["http://your-insecure-registory:5000"]
-  owner: root
-  patch: /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
 ssh_authorized_keys:
 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDeJiOJcZHItmnRJNXBzsNiohUKpqrbUCvnOQ8U27ey/Yrcex93Cfr/mcPA4uOgPIb/W5BVwX2fkVOE9+DKEM2bYT9CxJ31SjntnfVMyHBmBiw0Wg3XsNWNOudOuhnZXdWBMW0rZJqV0phLGodKQeBWimM6gSijPerHu9B5bv5VceO54r8BL7/nZ+8z5SZ4yrS4m8G3ofU1qKrxFB3WPeGy15PTNwwLkStdeb2kYGJ3hJdkBwvNTPBfl7j3JlAVOXWgSNKXBZrSnl+9VzLJd+0y3Fa8vbl46WPE5W0FSseeHXn5cacSNL0PX2ArKYlPxEs6ZZqEGOJx27Ej94Me7coNlUU7ntHjs8fAEjTqcC+Rcv/PMo3fH7XDS1Y+CwB1j/BPZ6aZqJrEiSkTWYqjE7mBNEbKJ5PkFzA7BUxKO3D2eBfWjylvsPciFlxDyUJKYVsErbOuWIBsHBE23300/wwXK9wZqm6y6XWkX6ItVO923N3vOTRrpJ39UyAQV+qveis= Administrator@YWZMVWW06YXA1XB
 boot_cmd:
