@@ -38,7 +38,7 @@ k3os:
   data_sources:
   - aws
   - cdrom
-  passowrd: p@ssw0rd
+  password: p@ssw0rd
   ntp_servers:
   - ntp.aliyun.com
   - time1.cloud.tencent.com
