@@ -2,6 +2,7 @@
 hostname: shawn-local-2
 write_files:
 - patch: /var/lib/connman/default.config
+  encoding: ""
   content: |-
     [service_eth0]
     Type = ethernet
@@ -12,6 +13,7 @@ write_files:
     Domain = chlover.local
     TimeServers = ntp.aliyun.com, time1.cloud.tencent.com, 0.cn.pool.ntp.org
 - patch: /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
+  encoding: ""
   content: |-
     [plugins.opt]
     path = "{{ .NodeConfig.Containerd.Opt }}"
