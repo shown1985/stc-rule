@@ -29,9 +29,10 @@ write_files:
       [plugins.cri.registry.mirrors."docker.io"]
         endpoint = ["http://f1361db2.m.daocloud.io"]
 ssh_authorized_keys:
-- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDeJiOJcZHItmnRJNXBzsNiohUKpqrbUCvnOQ8U27ey/Yrcex93Cfr/mcPA4uOgPIb/W5BVwX2fkVOE9+DKEM2bYT9CxJ31SjntnfVMyHBmBiw0Wg3XsNWNOudOuhnZXdWBMW0rZJqV0phLGodKQeBWimM6gSijPerHu9B5bv5VceO54r8BL7/nZ+8z5SZ4yrS4m8G3ofU1qKrxFB3WPeGy15PTNwwLkStdeb2kYGJ3hJdkBwvNTPBfl7j3JlAVOXWgSNKXBZrSnl+9VzLJd+0y3Fa8vbl46WPE5W0FSseeHXn5cacSNL0PX2ArKYlPxEs6ZZqEGOJx27Ej94Me7coNlUU7ntHjs8fAEjTqcC+Rcv/PMo3fH7XDS1Y+CwB1j/BPZ6aZqJrEiSkTWYqjE7mBNEbKJ5PkFzA7BUxKO3D2eBfWjylvsPciFlxDyUJKYVsErbOuWIBsHBE23300/wwXK9wZqm6y6XWkX6ItVO923N3vOTRrpJ39UyAQV+qveis= Administrator@YWZMVWW06YXA1XB
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCuem1Hr6mvnLWfVQQTv7CTkZgM9NuL6RFtYuJAIB6PgYKaeOzy0OALVQvqmIRcRU+7K/bRWyrxHTzcfLSC96S0aDaSnLuzViF1rNC1hBSCk1gF1KClq+ril2ddG6tRCJOopWEFyfUbSbCuziePgIWUNGJCQ0/ugKNmFmFgKcYGrTY3Ev2gC4JYTq9wu2Znv5UWfIa/Qpbbdc4GSiK6teLUn1xBFSGHFw2VEOiiOKV/Zz9thUZJFIxXKIW1wEv2Ys0JqO3s/w4N/TBMhDxrEXRSJT31cd0E/n/8vZp8CvoVQW+BHRcAaIFmyne4g3JQZAIOcGMX7c+cESseN8kwpFudxrx6dKQdzAxqgyJos/1w1GBp1iZIKioieZNhzUjTFqryb2KFzOq/SgRNeZZLkbSS45Lci5fv07QMpZ4cCPvq3d5aU5D/N2wJucVI+3NAIab1Ey2UUGJMXdVhnvfwljRJKIcE7fTnMHeTQszNX2uEDklcQ63BwCsZFj3G1mdDL8U= Administrator@YWZMVWW06YXA1XB
 boot_cmd:
 - "echo Asia/Shanghai > /etc/timezone"
+- "echo 'AuthorizedKeysFile .ssh/authorized_keys' >> /etc/ssh/sshd_config"
 k3os:
   data_sources:
   - aws
