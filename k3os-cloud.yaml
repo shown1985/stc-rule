@@ -1,12 +1,12 @@
 # cloud-config
-hostname: shawn-local-2
+hostname: shawn-local-1
 write_files:
 - path: /var/lib/connman/default.config
   encoding: ""
   content: |-
     [service_eth0]
     Type = ethernet
-    IPv4 = 172.16.10.248/255.255.255.0/172.16.10.250
+    IPv4 = 172.16.10.249/255.255.255.0/172.16.10.250
     IPv6 = off
     Nameservers = 172.16.10.250
     SearchDomains = chlover.local
@@ -43,7 +43,7 @@ k3os:
   - time1.cloud.tencent.com
   - 0.cn.pool.ntp.org
   dns_nameservers:
-  - 192.168.100.240
+  - 172.16.10.250
   - 223.5.5.5
   token: SHAWN_HOME_LOCAL_CLUSTER
   k3s_args:
