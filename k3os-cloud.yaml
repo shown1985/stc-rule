@@ -6,7 +6,7 @@ write_files:
   content: |-
     [service_eth0]
     Type = ethernet
-    IPv4 = 172.16.10.249/255.255.255.0/172.16.10.250
+    IPv4 = 172.16.10.247/255.255.255.0/172.16.10.250
     IPv6 = off
     Nameservers = 172.16.10.250
     SearchDomains = chlover.local
