@@ -1,5 +1,5 @@
 # cloud-config
-hostname: shawn-local-2
+hostname: shawn-local-1
 write_files:
 - path: /var/lib/connman/default.config
   encoding: ""
