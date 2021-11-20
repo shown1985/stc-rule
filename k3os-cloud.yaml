@@ -1,12 +1,12 @@
 # cloud-config
-hostname: shawn-local-1
+hostname: shawn-business-1
 write_files:
 - path: /var/lib/connman/default.config
   encoding: ""
   content: |-
     [service_eth0]
     Type = ethernet
-    IPv4 = 172.16.10.247/255.255.255.0/172.16.10.250
+    IPv4 = 172.16.10.246/255.255.255.0/172.16.10.250
     IPv6 = off
     Nameservers = 172.16.10.250
     SearchDomains = chlover.local
@@ -27,7 +27,7 @@ write_files:
 
     [plugins.cri.registry.mirrors]
       [plugins.cri.registry.mirrors."docker.io"]
-        endpoint = ["http://f1361db2.m.daocloud.io"]
+        endpoint = ["https://2vuvqnsg.mirror.aliyuncs.com"]
 ssh_authorized_keys:
 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCuem1Hr6mvnLWfVQQTv7CTkZgM9NuL6RFtYuJAIB6PgYKaeOzy0OALVQvqmIRcRU+7K/bRWyrxHTzcfLSC96S0aDaSnLuzViF1rNC1hBSCk1gF1KClq+ril2ddG6tRCJOopWEFyfUbSbCuziePgIWUNGJCQ0/ugKNmFmFgKcYGrTY3Ev2gC4JYTq9wu2Znv5UWfIa/Qpbbdc4GSiK6teLUn1xBFSGHFw2VEOiiOKV/Zz9thUZJFIxXKIW1wEv2Ys0JqO3s/w4N/TBMhDxrEXRSJT31cd0E/n/8vZp8CvoVQW+BHRcAaIFmyne4g3JQZAIOcGMX7c+cESseN8kwpFudxrx6dKQdzAxqgyJos/1w1GBp1iZIKioieZNhzUjTFqryb2KFzOq/SgRNeZZLkbSS45Lci5fv07QMpZ4cCPvq3d5aU5D/N2wJucVI+3NAIab1Ey2UUGJMXdVhnvfwljRJKIcE7fTnMHeTQszNX2uEDklcQ63BwCsZFj3G1mdDL8U= Administrator@YWZMVWW06YXA1XB
 boot_cmd:
@@ -45,10 +45,8 @@ k3os:
   dns_nameservers:
   - 172.16.10.250
   - 223.5.5.5
-  token: SHAWN_HOME_LOCAL_CLUSTER
+  token: K107e8c9859406cfdbc4268eff6707e735b94af6d90c1babb9e8042c7f50cc1d28f::server:f3867ad5b1a16a6c23322f8f52a814bd
   k3s_args:
   - server
   environment:
-    K3S_DATASTORE_ENDPOINT: "mysql://shawndb:chlover@tcp(192.168.100.252:3307)/k3s"
-    http_proxy: http://192.168.100.240:7890
-    https_proxy: http://192.168.100.240:7890
+    K3S_DATASTORE_ENDPOINT: "mysql://shawndb:chlover@tcp(192.168.100.252:3307)/k3s_business"
